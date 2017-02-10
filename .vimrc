@@ -1,0 +1,32 @@
+execute pathogen#infect()
+
+" Basic formatting
+filetype plugin indent on
+set number
+syntax on
+set autowrite
+set background=light
+
+" Fix Homebrew's default of not allowing you to delete across chars like newlines
+set backspace=indent,eol,start
+
+" Highlight lines that goes over 79 chars
+au BufRead,BufNewFile *.py,*pyw highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+au BufRead,BufNewFile *.py,*pyw match OverLength /\%79v.\+/
+
+" spacing, python style
+au BufRead,BufNewFile *.py set tabstop=4 shiftwidth=4 expandtab
+
+" Python. Remove trailing whitespace
+autocmd BufWritePre *.py :%s/\s\+$//e
+
+" Python. Call pyflake/pep8 before writing
+autocmd BufWritePost *.py call Flake8()
+
+" Allows pasting straight to system clipboard
+set clipboard+=unnamed
+
+" Tell vim-slime to send pasted stuff to tmux
+let g:slime_target = 'tmux'
+" Use cpaste with vim-slime
+let g:slime_python_ipython = 1

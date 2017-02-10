@@ -1,0 +1,13 @@
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	unstage = reset HEAD --
+	last = log -1 HEAD
+[user]
+[merge]
+	tool = vimdiff
+[push]
+	default = simple
