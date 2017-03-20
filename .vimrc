@@ -30,3 +30,9 @@ set clipboard+=unnamed
 let g:slime_target = 'tmux'
 " Use cpaste with vim-slime
 let g:slime_python_ipython = 1
+
+" Add a newline below without entering Insert mode
+nmap <Enter> o<Esc>k
+" I tried to add the same thing for newline above but my computer's not
+" recognizing shift-enter as different from enter
+" nmap <S-Enter> O<Esc>j
