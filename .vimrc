@@ -27,9 +27,14 @@ autocmd BufWritePost *.py call Flake8()
 set clipboard+=unnamed
 
 " Tell vim-slime to send pasted stuff to tmux
+" https://github.com/jpalardy/vim-slime#advanced-configuration
 let g:slime_target = 'tmux'
-" Use cpaste with vim-slime
+" Use %cpaste with vim-slime
 let g:slime_python_ipython = 1
+" Default target terminal and pane
+let g:slime_default_config = {"socket_name": "default", "target_pane": "1"}
+let g:slime_dont_ask_default = 1
+
 
 " Add a newline below without entering Insert mode
 nmap <Enter> o<Esc>k
