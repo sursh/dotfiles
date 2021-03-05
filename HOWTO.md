@@ -4,7 +4,7 @@
 1. Install vim:
 `brew install vim`
 
-Make sure it's install with clipboard support: 
+1. Make sure vim's installed with clipboard support: 
 `vim --version | grep clipboard`
 and check that `clipboard` has a plus next to it
 
