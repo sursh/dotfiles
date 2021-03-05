@@ -17,3 +17,5 @@ and check that `clipboard` has a plus next to it
 `pip install flake8`
 
 1. Karabiner-elements finally supports remapping caps lock to escape & control. In the GUI, go to Complex Modifications, Get more from internet, and then choose the modification if it's available. karabiner.json provided for reference if it's not: replace the default config file with this one
+
+1. Grab [git autocomplete script](https://github.com/git/git/blob/master/contrib/completion/git-completion.bash) and stick in homedir
