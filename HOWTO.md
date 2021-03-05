@@ -1,25 +1,19 @@
-Install homebrew: 
-
+1. Install [homebrew](https://brew.sh/)
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 
-Install vim with clipboard support:
+1. Install vim:
+`brew install vim`
 
-`brew install vim --with-client-server`
-
-to check that it's installed: 
-`vim --version`
+Make sure it's install with clipboard support: 
+`vim --version | grep clipboard`
 and check that `clipboard` has a plus next to it
 
-Install tmux:
+1. Install tmux:
 `brew install tmux`
 
+1. ONLY THEN: For pip and python, [install Anaconda](https://www.anaconda.com/products/individual#Downloads)
 
-ONLY THEN: For pip and python, install Anaconda
-
-https://www.continuum.io/downloads#osx
-
-
-Then, install flake8:
+1. Then, install flake8:
 `pip install flake8`
 
-Karabiner-elements finally supports remapping caps lock to escape & control. In the GUI, go to Complex Modifications, Get more from internet, and then choose the modification if it's available. karabiner.json provided for reference if it's not: replace the default config file with this one
+1. Karabiner-elements finally supports remapping caps lock to escape & control. In the GUI, go to Complex Modifications, Get more from internet, and then choose the modification if it's available. karabiner.json provided for reference if it's not: replace the default config file with this one
