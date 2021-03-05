@@ -1,17 +1,16 @@
 Install homebrew: 
 
-`/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 
 Install vim with clipboard support:
 
-brew install vim --with-client-server
+`brew install vim --with-client-server`
 
 to check that it's installed: 
-vim --version 
-and check that "clipboard" has a plus next to it
+`vim --version`
+and check that `clipboard` has a plus next to it
 
 Install tmux:
-
 `brew install tmux`
 
 
