@@ -1,12 +1,18 @@
 1. Install [homebrew](https://brew.sh/)
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 
-1. Install vim:
-`brew install vim`
+1. Install vim with clipboard support:
+brew install vim --with-client-server
 
-1. Make sure vim's installed with clipboard support: 
+Make sure vim's installed with clipboard support: 
 `vim --version | grep clipboard`
 and check that `clipboard` has a plus next to it
+
+1. git autocomplete: 
+- all files are [here](https://github.com/git/git/blob/master/contrib/completion/git-completion.zsh) but the installation directions didn't work for me. [These did](https://www.oliverspryn.com/blog/adding-git-completion-to-zsh). Short version: 
+- put both scripts in the same directory (`~/.zsh`)
+- don't rename the zsh one
+- .zshrc needs `autoload -Uz compinit && compinit`
 
 1. Install tmux:
 `brew install tmux`
